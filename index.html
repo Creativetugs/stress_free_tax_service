@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Preparation Services | A Stress Free Tax Service</title>
+    <meta name="description" content="Personalized tax preparation, tax planning, amended returns, and tax issue support for individuals and businesses. Contact A Stress Free Tax Service to discuss your needs.">
+    <meta name="keywords" content="Tax preparation services, personal tax preparation, small business tax services, amended tax returns, prior-year tax returns, tax planning services, Tax preparation in Spanaway, Washington, Tax services in Pierce County, Nationwide tax return preparation">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#173B57',
+                            light: '#89CFF0',
+                            pink: '#CC3B9A',
+                            soft: '#F5FAFD',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Styles for Accents and Smooth Interactions */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .btn-pink {
+            background-color: #CC3B9A;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-pink:hover {
+            background-color: #a82d7c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(204, 59, 154, 0.3);
+        }
+        .btn-outline-navy {
+            border: 2px solid #173B57;
+            color: #173B57;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-navy:hover {
+            background-color: #173B57;
+            color: white;
+        }
+        .service-card:hover .icon-wrapper {
+            background-color: #173B57;
+            color: white;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-navy antialiased bg-white selection:bg-brand-light selection:text-brand-navy">
+
+    <header class="fixed w-full z-50 top-0 flex flex-col">
+        <!-- Announcement Bar -->
+        <div class="bg-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 flex flex-wrap justify-center items-center gap-3 relative z-20">
+            <span>Concept by <a href="https://www.creativetugs.com/" target="_blank" class="font-bold hover:text-brand-pink transition-colors">Creative Tugs</a> <i class="fa-solid fa-heart text-brand-pink text-xs ml-1"></i></span>
+            <a href="https://calendly.com/" target="_blank" class="bg-brand-pink hover:bg-brand-light hover:text-brand-navy text-white px-4 py-1.5 rounded-full font-bold transition-all duration-300 shadow-sm flex items-center gap-2">
+                Book a Consultation <i class="fa-regular fa-calendar"></i>
+            </a>
+        </div>
+
+        <nav class="glass-nav border-b border-gray-100 shadow-sm transition-all duration-300 relative z-10 w-full" id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <a href="#services" class="text-brand-navy hover:text-brand-pink font-medium transition-colors">Services</a>
+                    <a href="#resources" class="text-brand-navy hover:text-brand-pink font-medium transition-colors">Resources</a>
+                    <a href="#contact" class="text-brand-navy hover:text-brand-pink font-medium transition-colors">Contact</a>
+                    
+                    <div class="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-200">
+                        <a href="https://www.encyro.com/astressfreetaxservice" target="_blank" class="text-brand-navy font-semibold hover:text-brand-pink transition-colors">
+                            <i class="fa-solid fa-lock mr-2"></i>Client Portal
+                        </a>
+                        <a href="#contact" class="btn-pink px-6 py-2.5 rounded-full font-semibold text-sm">
+                            Schedule a Consultation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-navy hover:text-brand-pink focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-brand-navy hover:bg-brand-soft rounded-md">About</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-brand-navy hover:bg-brand-soft rounded-md">Services</a>
+                <a href="#resources" class="block px-3 py-3 text-base font-medium text-brand-navy hover:bg-brand-soft rounded-md">Resources</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-brand-navy hover:bg-brand-soft rounded-md">Contact</a>
+                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="https://www.encyro.com/astressfreetaxservice" target="_blank" class="w-full text-center px-4 py-3 border border-brand-navy text-brand-navy font-semibold rounded-md hover:bg-brand-navy hover:text-white transition-colors">
+                        <i class="fa-solid fa-lock mr-2"></i>Client Portal
+                    </a>
+                    <a href="#contact" class="w-full text-center btn-pink px-4 py-3 rounded-md font-semibold">
+                        Schedule a Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <section class="relative pt-40 pb-20 lg:pt-56 lg:pb-32 bg-brand-soft overflow-hidden">
+        <!-- Decorative blob -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-light opacity-20 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-brand-pink font-bold tracking-wider uppercase text-sm mb-4">Personalized Tax Services &middot; Year-Round Support</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Less Tax Stress.<br>
+                        <span class="text-brand-light">More Peace of Mind.</span>
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-xl">
+                        Tax preparation and personalized tax support for individuals, families, and small businesses. Get help navigating tax season, resolving tax concerns, and managing your paperwork with a personal touch.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#contact" class="btn-pink px-8 py-4 rounded-full text-center font-semibold text-lg">
+                            Schedule a Consultation
+                        </a>
+                        <a href="#services" class="btn-outline-navy px-8 py-4 rounded-full text-center font-semibold text-lg">
+                            Explore Our Services
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-4 text-gray-600">
+                        <div class="flex -space-x-2">
+                            <!-- Simple star icons for trust -->
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-sm font-medium">Serving clients nationwide with personalized care.</p>
+                    </div>
+                </div>
+                <div class="relative hidden md:block">
+                    <!-- Professional office setting placeholder -->
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Professional Tax Consultation" class="rounded-2xl shadow-2xl object-cover w-full h-[500px]">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-light/20 rounded-full flex items-center justify-center text-brand-navy">
+                            <i class="fa-solid fa-phone-volume text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-semibold uppercase">Call Us Today</p>
+                            <p class="text-xl font-bold text-brand-navy">(253) 345-8570</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-navy py-12 relative z-20 -mt-8 mx-4 sm:mx-8 lg:mx-auto max-w-7xl rounded-2xl shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 flex items-center justify-center text-brand-light mb-4">
+                    <i class="fa-solid fa-award text-3xl"></i>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-2">20+ Years Experience</h3>
+                <p class="text-brand-light text-sm">Established tax service experience.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 flex items-center justify-center text-brand-light mb-4">
+                    <i class="fa-solid fa-handshake-angle text-3xl"></i>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-2">Personalized Service</h3>
+                <p class="text-brand-light text-sm">A personal approach to every client.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 flex items-center justify-center text-brand-light mb-4">
+                    <i class="fa-solid fa-shield-halved text-3xl"></i>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-2">Secure Documents</h3>
+                <p class="text-brand-light text-sm">Access a secure portal for sharing.</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 flex items-center justify-center text-brand-light mb-4">
+                    <i class="fa-solid fa-map-location-dot text-3xl"></i>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-2">Nationwide Prep</h3>
+                <p class="text-brand-light text-sm">Federal and state return preparation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Tax Services With a Personal Touch</h2>
+            <p class="text-xl text-gray-600 mb-8 font-light leading-relaxed">
+                Taxes can be complicated. Finding someone who takes the time to understand your situation shouldn't be.
+            </p>
+            <div class="space-y-6 text-gray-600 mb-10 text-left md:text-center">
+                <p>
+                    At <strong class="text-brand-navy">A Stress Free Tax Service</strong>, we believe tax preparation should feel clear, manageable, and personal. With more than two decades of experience, we help individuals, families, workers, and small business owners navigate tax filing and related tax matters.
+                </p>
+                <p>
+                    Our approach is built around understanding your needs, explaining your options, and helping you move forward with greater confidence.
+                </p>
+                <p>
+                    Whether you're preparing this year's return or dealing with an unresolved tax issue, we're here to discuss your situation and determine how we may help.
+                </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 text-brand-pink font-bold hover:text-brand-navy transition-colors text-lg">
+                Meet Your Tax Professional <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-brand-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive tax and financial support designed around your unique situation.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="icon-wrapper w-14 h-14 bg-brand-soft rounded-xl flex items-center justify-center text-brand-navy text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-brand-pink transition-colors">Tax Preparation & Planning</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Tax return preparation and tax planning support for individuals and businesses, including federal and state returns, prior-year returns, and amended returns.</p>
+                    <a href="#contact" class="text-brand-navy font-semibold text-sm hover:text-brand-pink transition-colors flex items-center gap-2">
+                        Explore Tax Services <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="icon-wrapper w-14 h-14 bg-brand-soft rounded-xl flex items-center justify-center text-brand-navy text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-brand-pink transition-colors">Small Business Tax Support</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Guidance on tax preparation, business tax considerations, Schedule C, and business entity selection to help you understand your responsibilities and options.</p>
+                    <a href="#contact" class="text-brand-navy font-semibold text-sm hover:text-brand-pink transition-colors flex items-center gap-2">
+                        Business Tax Services <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="icon-wrapper w-14 h-14 bg-brand-soft rounded-xl flex items-center justify-center text-brand-navy text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-brand-pink transition-colors">Tax Problems & Back Taxes</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Assistance with past-due returns, amended filings, tax liens, tax debt concerns, and paperwork relating to offers in compromise or innocent spouse relief.</p>
+                    <a href="#contact" class="text-brand-navy font-semibold text-sm hover:text-brand-pink transition-colors flex items-center gap-2">
+                        Discuss Your Tax Concerns <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="icon-wrapper w-14 h-14 bg-brand-soft rounded-xl flex items-center justify-center text-brand-navy text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-brand-pink transition-colors">Business & Financial Services</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Business entity selection, audits, reviews and compilations, estate and trust tax preparation, and tax planning support, subject to available qualifications.</p>
+                    <a href="#contact" class="text-brand-navy font-semibold text-sm hover:text-brand-pink transition-colors flex items-center gap-2">
+                        View Business Services <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="icon-wrapper w-14 h-14 bg-brand-soft rounded-xl flex items-center justify-center text-brand-navy text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-stamp"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-brand-pink transition-colors">Notary Public Services</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">Notary services for eligible documents and business needs, helping make document signing more convenient for our clients.</p>
+                    <a href="#contact" class="text-brand-navy font-semibold text-sm hover:text-brand-pink transition-colors flex items-center gap-2">
+                        Ask About Notary Services <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">How it Works</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A streamlined, straightforward process to handle your tax preparation.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Line connector for desktop -->
+                <div class="hidden lg:block absolute top-12 left-16 right-16 h-0.5 bg-brand-soft z-0"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white border-4 border-brand-soft rounded-full flex items-center justify-center text-2xl font-bold text-brand-pink mb-6 shadow-sm">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Let's Talk</h3>
+                    <p class="text-gray-600 text-sm">Contact us to discuss your tax needs, questions, or concerns. We'll determine whether your situation fits our services.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white border-4 border-brand-soft rounded-full flex items-center justify-center text-2xl font-bold text-brand-pink mb-6 shadow-sm">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Share Your Documents</h3>
+                    <p class="text-gray-600 text-sm">Arrange an in-person appointment, use the secure client portal, or ask about the available document drop-off options.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white border-4 border-brand-soft rounded-full flex items-center justify-center text-2xl font-bold text-brand-pink mb-6 shadow-sm">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Review Your Options</h3>
+                    <p class="text-gray-600 text-sm">We'll review the information relevant to your situation, explain the next steps, and discuss applicable fees before proceeding.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white border-4 border-brand-soft rounded-full flex items-center justify-center text-2xl font-bold text-brand-pink mb-6 shadow-sm">
+                        04
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Move Forward</h3>
+                    <p class="text-gray-600 text-sm">Get support with the agreed tax preparation or related services, with attention to your questions and documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="py-24 bg-brand-soft">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Tax Documents,<br>Made Easier</h2>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Spend less time wondering what to do next. Access the tools you need to manage your tax service in one convenient place.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-pink shrink-0 shadow-sm">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Secure Client Portal</h4>
+                                <p class="text-gray-600 text-sm mb-2">Submit documents and access available records through the firm's secure portal.</p>
+                                <a href="https://www.encyro.com/astressfreetaxservice" target="_blank" class="text-brand-pink font-semibold hover:text-brand-navy transition-colors text-sm">Access Client Portal &rarr;</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-pink shrink-0 shadow-sm">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Convenient Invoice Payments</h4>
+                                <p class="text-gray-600 text-sm mb-2">Access the firm's payment page to pay an invoice using the available payment options.</p>
+                                <a href="https://swipesimple.com/links/lnk_79fc05d0ae41a825d801e1c7fd6edfc6" target="_blank" class="text-brand-pink font-semibold hover:text-brand-navy transition-colors text-sm">Pay an Invoice &rarr;</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-pink shrink-0 shadow-sm">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Tax Preparation Checklist</h4>
+                                <p class="text-gray-600 text-sm mb-2">Get organized before your appointment by reviewing the documents and information you may need.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Refund Resources Widget -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100">
+                    <h3 class="text-2xl font-bold mb-4">Looking for Your Tax Refund?</h3>
+                    <p class="text-gray-600 text-sm mb-8">Use the official resources below to check your refund status. Processing times and eligibility depend on the relevant tax authority.</p>
+                    
+                    <div class="space-y-4">
+                        <a href="https://www.irs.gov/refunds" target="_blank" class="block p-4 border border-gray-200 rounded-xl hover:border-brand-light hover:bg-brand-soft transition-all group">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h5 class="font-bold text-brand-navy">Federal Tax Refund</h5>
+                                    <p class="text-xs text-gray-500 mt-1">Check status of your federal income tax refund.</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-brand-pink transition-colors"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.irs.gov/filing/wheres-my-amended-return" target="_blank" class="block p-4 border border-gray-200 rounded-xl hover:border-brand-light hover:bg-brand-soft transition-all group">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h5 class="font-bold text-brand-navy">Amended Federal Return</h5>
+                                    <p class="text-xs text-gray-500 mt-1">Find updates on an amended federal tax return.</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-brand-pink transition-colors"></i>
+                            </div>
+                        </a>
+                        
+                        <a href="#" target="_blank" class="block p-4 border border-gray-200 rounded-xl hover:border-brand-light hover:bg-brand-soft transition-all group">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h5 class="font-bold text-brand-navy">State Tax Refund</h5>
+                                    <p class="text-xs text-gray-500 mt-1">Find your state's official refund-tracking resource.</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-brand-pink transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Clients Choose Us</h2>
+                <div class="w-20 h-1 bg-brand-pink mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="text-brand-light text-3xl mb-4"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h4 class="font-bold text-lg mb-3">Experience you can draw on</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">More than 20 years of experience serving individuals, workers, and business owners.</p>
+                </div>
+                <div>
+                    <div class="text-brand-light text-3xl mb-4"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h4 class="font-bold text-lg mb-3">A personal, low-pressure approach</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">Discuss your situation and understand the proposed next steps before deciding how to proceed.</p>
+                </div>
+                <div>
+                    <div class="text-brand-light text-3xl mb-4"><i class="fa-solid fa-folder-open"></i></div>
+                    <h4 class="font-bold text-lg mb-3">Flexible document handling</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">Choose from available in-person appointments, secure portal uploads, and the firm's secured drop-off box.</p>
+                </div>
+                <div>
+                    <div class="text-brand-light text-3xl mb-4"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h4 class="font-bold text-lg mb-3">Year-round availability</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">Get in touch outside the main tax season to discuss available services and appointment options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-brand-light/20 rounded-3xl transform rotate-3 scale-105"></div>
+                    <img src="https://c101706731.preview.getnetset.com/files/IMG_1643-scaled.jpg" alt="Elizabeth Stonger" class="relative rounded-3xl shadow-xl w-full object-cover h-[500px]">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Personal Attention.<br><span class="text-brand-light">Professional Tax Support.</span></h2>
+                    
+                    <div class="space-y-5 text-gray-600 mb-8">
+                        <p>
+                            At <strong class="text-brand-navy">A Stress Free Tax Service</strong>, we understand that every client has a different financial situation. Our goal is to make the tax process more manageable through personal attention, clear communication, and services tailored to your needs.
+                        </p>
+                        <p>
+                            We work with a wide range of clients, including police officers, teachers, correctional officers, firefighters, construction workers, homeowners, and small business owners.
+                        </p>
+                        <p>
+                            Whether you need help with an annual return or have a more complex tax question, we welcome the opportunity to learn about your needs and discuss the available options.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8 border-l-4 border-brand-pink pl-4">
+                        <h4 class="font-bold text-xl text-brand-navy">Elizabeth Stonger</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider">A Stress Free Tax Service</p>
+                    </div>
+                    
+                    <a href="#contact" class="btn-pink px-8 py-3 rounded-full font-semibold inline-block">
+                        Contact Us to Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-soft">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-navy font-semibold">
+                        Do you prepare tax returns outside tax season?
+                        <span class="ml-1.5 flex-shrink-0 bg-brand-soft p-2 rounded-full text-brand-navy group-open:rotate-180 transition-transform duration-300">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">
+                        Yes. The firm offers services throughout the year. Contact us to discuss your needs and arrange an appointment.
+                    </div>
+                </details>
+                
+                <!-- FAQ 2 -->
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-navy font-semibold">
+                        Can I submit my tax documents online?
+                        <span class="ml-1.5 flex-shrink-0 bg-brand-soft p-2 rounded-full text-brand-navy group-open:rotate-180 transition-transform duration-300">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">
+                        The firm offers a secure client portal for document uploads. Contact us if you need help accessing it.
+                    </div>
+                </details>
+                
+                <!-- FAQ 3 -->
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-navy font-semibold">
+                        Can you help with past-due tax returns or tax debt concerns?
+                        <span class="ml-1.5 flex-shrink-0 bg-brand-soft p-2 rounded-full text-brand-navy group-open:rotate-180 transition-transform duration-300">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">
+                        The firm lists services relating to prior-year returns, amended filings, tax liens, and certain tax debt matters. We'll discuss your situation to determine whether we can assist.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-navy font-semibold">
+                        Do you serve clients outside Washington?
+                        <span class="ml-1.5 flex-shrink-0 bg-brand-soft p-2 rounded-full text-brand-navy group-open:rotate-180 transition-transform duration-300">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">
+                        The firm states that it prepares federal and state tax returns nationwide. Contact us to confirm availability for your particular needs.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-navy font-semibold">
+                        How much do tax preparation services cost?
+                        <span class="ml-1.5 flex-shrink-0 bg-brand-soft p-2 rounded-full text-brand-navy group-open:rotate-180 transition-transform duration-300">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">
+                        Fees depend on the service and complexity of your situation. Contact us to discuss pricing and request an estimate where available.
+                    </div>
+                </details>
+                
+                <!-- FAQ 6 -->
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-navy font-semibold">
+                        What if you cannot help with my tax issue?
+                        <span class="ml-1.5 flex-shrink-0 bg-brand-soft p-2 rounded-full text-brand-navy group-open:rotate-180 transition-transform duration-300">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">
+                        The firm indicates that it will assess whether your needs fall within its scope and, where possible, direct you toward another suitable professional.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-navy rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                <!-- CTA Text area -->
+                <div class="w-full lg:w-5/12 p-10 lg:p-16 flex flex-col justify-center bg-brand-navy text-white relative">
+                    <!-- Decorative overlay -->
+                    <div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'#ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+                    
+                    <div class="relative z-10">
+                        <p class="text-brand-pink font-bold tracking-wider uppercase text-sm mb-4">Let's Make Tax Time Easier</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for a More Stress-Free Tax Experience?</h2>
+                        <p class="text-brand-soft mb-8">
+                            Whether you're preparing your next return or need guidance on a tax concern, start with a conversation. We'll learn about your needs and discuss the next steps.
+                        </p>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand-light">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-300">Call us directly</p>
+                                <p class="text-xl font-bold text-white">(253) 345-8570</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form area -->
+                <div class="w-full lg:w-7/12 bg-brand-soft p-10 lg:p-16">
+                    <form onsubmit="event.preventDefault(); showSuccessMessage();" class="space-y-6" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-light focus:border-brand-light outline-none transition-all">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-light focus:border-brand-light outline-none transition-all">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span class="text-gray-400 font-normal">(Optional)</span></label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-light focus:border-brand-light outline-none transition-all">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-1">What do you need help with?</label>
+                                <select id="service" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-light focus:border-brand-light outline-none transition-all bg-white">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="tax-prep">Tax Preparation</option>
+                                    <option value="business">Small Business Taxes</option>
+                                    <option value="problems">Tax Problems / Back Taxes</option>
+                                    <option value="notary">Notary Services</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-light focus:border-brand-light outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-pink py-4 rounded-lg font-bold text-lg flex justify-center items-center gap-2">
+                            Request a Consultation <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                        
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="success-msg" class="hidden mt-4 p-4 bg-green-50 text-green-700 border border-green-200 rounded-lg text-center font-medium">
+                            Thank you! Your message has been sent. We will get back to you shortly.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand & Address -->
+                <div class="lg:col-span-1">
+                    <img src="https://c101706731.preview.getnetset.com/files/renditionDownload-1.png" alt="Logo" class="h-10 w-auto mb-6">
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                        A Stress Free Tax Service offers personalized tax preparation and support designed to bring you peace of mind.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-brand-navy mb-4">Contact Information</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-phone text-brand-pink mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-brand-navy">Primary: (253) 345-8570</p>
+                                <p>Additional: (253) 295-1322</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hours -->
+                <div>
+                    <h4 class="font-bold text-brand-navy mb-4">Hours of Operation</h4>
+                    <div class="text-sm text-gray-600 space-y-3">
+                        <p class="font-semibold text-brand-navy border-b border-gray-200 pb-1">Tax Season (Dec - May 1):</p>
+                        <p>Mon – Sat: 9:00 AM – 8:00 PM</p>
+                        <p>Sunday: Closed</p>
+                        <p class="font-semibold text-brand-navy border-b border-gray-200 pb-1 mt-4">Outside Tax Season:</p>
+                        <p>Flexible hours by appointment.</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-brand-navy mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#about" class="hover:text-brand-pink transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-pink transition-colors">Tax Services</a></li>
+                        <li><a href="#resources" class="hover:text-brand-pink transition-colors">Resources</a></li>
+                        <li><a href="https://www.encyro.com/astressfreetaxservice" target="_blank" class="hover:text-brand-pink transition-colors">Client Portal</a></li>
+                        <li><a href="https://swipesimple.com/links/lnk_79fc05d0ae41a825d801e1c7fd6edfc6" target="_blank" class="hover:text-brand-pink transition-colors">Pay Invoice</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm text-center md:text-left">
+                    &copy; <span id="year"></span> A Stress Free Tax Service. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-brand-pink transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-pink transition-colors">Accessibility</a>
+                </div>
+            </div>
+            <p class="text-xs text-gray-400 mt-4 text-center">
+                * Please confirm current office address, professional credentials, and applicable legal disclosures prior to full site launch.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm', 'py-1');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+
+        // Mock Form Submission
+        function showSuccessMessage() {
+            const btn = document.querySelector('#contact-form button[type="submit"]');
+            const msg = document.getElementById('success-msg');
+            
+            // Disable button briefly
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            
+            setTimeout(() => {
+                btn.innerHTML = 'Request a Consultation <i class="fa-solid fa-paper-plane text-sm"></i>';
+                btn.disabled = false;
+                msg.classList.remove('hidden');
+                document.getElementById('contact-form').reset();
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    msg.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
